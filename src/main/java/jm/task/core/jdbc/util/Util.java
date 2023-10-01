@@ -19,8 +19,8 @@ public class Util {
     // реализуйте настройку соеденения с БД
 
     private static final String URL = "jdbc:mysql://localhost:3306/pavel";
-    private static final String USERNAME = "Pavel Dzhazga";
-    private static final String PASSWORD = "25814789632GfGf";
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "root";
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
 
 
@@ -56,10 +56,10 @@ public class Util {
                 settings.put(Environment.URL, URL);
                 settings.put(Environment.USER, USERNAME);
                 settings.put(Environment.PASS, PASSWORD);
-                settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
+                settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL8Dialect");
                 settings.put(Environment.SHOW_SQL, "true");
                 settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
-                settings.put(Environment.HBM2DDL_AUTO, "");
+                settings.put(Environment.HBM2DDL_AUTO, "create");
 
                 configuration.setProperties(settings);
                 configuration.addAnnotatedClass(User.class);

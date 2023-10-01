@@ -9,9 +9,9 @@ public interface UserService {
 
     void dropUsersTable();
 
-    void saveUser(User user);
+    void saveUser(String name, String lastName, byte age);
 
-    void removeUserById(User user);
+    void removeUserById(Long id);
 
     List<User> getAllUsers();
 

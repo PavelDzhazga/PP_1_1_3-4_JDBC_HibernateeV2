@@ -12,12 +12,12 @@ public class Main {
         UserDao userDao = new UserDaoHibernateImpl();
         userDao.createUsersTable();
 
-        userDao.saveUser(new User("name1", "lastName1", (byte) 22));
-        userDao.saveUser(new User("name2", "lastName2", (byte) 1));
-        userDao.saveUser(new User("name3", "lastName3", (byte) 34));
-        userDao.saveUser(new User("name4", "lastName4", (byte) 55));
+        userDao.saveUser("name1", "lastName1", (byte) 22);
+        userDao.saveUser("name2", "lastName2", (byte) 1);
+        userDao.saveUser("name3", "lastName3", (byte) 34);
+        userDao.saveUser("name4", "lastName4", (byte) 55);
 
-        userDao.removeUserById(new User("name1", "lastName1", (byte) 22));
+        userDao.removeUserById(3L);
         userDao.getAllUsers();
         userDao.cleanUsersTable();
         userDao.dropUsersTable();
